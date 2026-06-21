@@ -1,0 +1,5 @@
+offer_id,nome,publico_alvo,descricao
+sem_oferta,Controle — não ofertar,todos,Braço de controle: nenhuma oferta é apresentada ao cliente.
+cartao_credito,Oferta A — Cartão de Crédito,jovem_baixa_renda,Cartão de crédito com limite inicial; hipótese: atrai perfil jovem.
+investimento,Oferta B — Investimento,maduro_alta_renda,Produto de investimento (CDB/fundo); hipótese: atrai perfil maduro.
+renegociacao,Plano de Renegociação,negativado,Renegociação de dívida; apenas para indício de inadimplência (default=yes).
