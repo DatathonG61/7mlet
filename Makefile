@@ -16,8 +16,18 @@ test:  ## Roda a suíte de testes
 lint:  ## Roda o linter (ruff)
 	uvx ruff check .
 
-demo:  ## Pipeline ponta a ponta (stub: evolui na E5 — sobe API + 5 requests)
-	@echo ">> [stub E0] 'make demo' será implementado na E5 (sobe API + 5 requests)."
-	@echo ">> Por enquanto valida que o pacote importa e os testes passam."
-	uv run python -c "import bankmarketing; print('bankmarketing OK')"
-	uv run pytest -q
+demo:  ## Pipeline ponta a ponta — sobe API + 5 requests de teste (E5)
+	@echo ">> [E5] Demo ponta a ponta: validação + API + requests"
+	@echo ""
+	@echo "1. Validando imports..."
+	python -c "import bankmarketing; print('✓ bankmarketing importa')"
+	@echo ""
+	@echo "2. Rodando testes..."
+	python -m pytest -q
+	@echo ""
+	@echo "3. Iniciando API em http://0.0.0.0:8000..."
+	@echo "   (rodando em background por 30 segundos)"
+	@echo ""
+	python scripts/demo_requests.py
+	@echo ""
+	@echo "✓ Demo concluída!"
