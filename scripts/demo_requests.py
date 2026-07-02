@@ -80,7 +80,7 @@ def wait_for_api(url: str, timeout: int = 30) -> bool:
                 print(f"✓ API pronta em {url}")
                 return True
         except requests.exceptions.ConnectionError:
-            pass
+            print("API ainda não disponível; nova tentativa em 1s...")
         time.sleep(1)
     return False
 
