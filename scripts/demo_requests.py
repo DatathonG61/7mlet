@@ -7,6 +7,7 @@ Sobe a API em background, faz requests POST /decide, valida responses, exporta l
 
 import json
 import subprocess
+import sys
 import time
 from pathlib import Path
 
@@ -188,4 +189,4 @@ def main():
 
 
 if __name__ == "__main__":
-    exit(main())
+    sys.exit(main())
